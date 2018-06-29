@@ -1,16 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <NavBar></NavBar>
     <router-view/>
   </div>
 </template>
 
+<script>
+import NavBar from '@/components/NavBar';
+
+export default {
+  name: 'app',
+  components: {
+    NavBar,
+  },
+};
+</script>
+
+
 <style lang="scss">
+@import "../node_modules/bulma/bulma.sass";
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
