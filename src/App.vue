@@ -6,19 +6,20 @@
 </template>
 
 <script>
-import NavBar from '@/components/NavBar';
+import NavBar from "@/components/NavBar";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    NavBar,
-  },
+    NavBar
+  }
 };
 </script>
 
 
 <style lang="scss">
-@import "../node_modules/bulma/bulma.sass";
+@import "./assets/mystyles";
+@import "../node_modules/bulma/sass/components/navbar";
 
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
