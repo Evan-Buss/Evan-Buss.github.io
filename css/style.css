@@ -4,8 +4,46 @@
   color: white;
 }
 
-h1 {
-  line-height: 20em;
+html,
+body {
+  margin: 0;
+}
+
+.title {
+  margin: 20px;
+  text-decoration: underline;
+}
+
+.flex-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-content {
+  margin: 20px;
+}
+
+.flex-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button {
+  width: 150px;
+  height: 50px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: white;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,54 @@
+$button-height: 50px;
+$button-width: 150px;
+$button-line-height: 50px;
+
 * {
   background-color: black;
   text-align: center;
   color: white;
 }
+html,
+body {
+  margin: 0;
+  // height: 75%;
+}
 
-h1 {
-  line-height: 20em;
+.title {
+  margin: 20px;
+  text-decoration: underline;
+}
+
+.flex-container {
+  height: 100%;
+  // width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background: white;
+  flex-direction: column;
+}
+
+.flex-content {
+  margin: 20px;
+}
+
+.flex-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button {
+  width: $button-width;
+  height: $button-height;
+  border-radius: 3px;
+  text-align: center;
+  line-height: $button-line-height;
+  text-decoration: none;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 }
