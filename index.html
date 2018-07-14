@@ -6,33 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Evan Buss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" /> -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
     integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
-
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
 </head>
 
-<body class="flex flex-col bg-grey-darkest text-center font-sans text-black min-h-screen justify-center ">
+<body class="flex flex-col bg-grey-darkest text-center text-black min-h-screen justify-center bg-gradient bg-center">
 
   <!-- Main Card -->
-  <div class="md:max-w-lg lg:max-w-2xl bg-grey-light content-center p-10 mx-auto rounded shadow-lg my-10">
+  <div class="bg-pattern max-w-xl content-center p-10 mx-auto md:rounded shadow-lg md:my-10 border border-black border-solid">
     <h1 class="underline mb-12 text-5xl">Evan Buss</h1>
 
     <!-- Info Section Container -->
-    <div class="text-md text-teal">
-      <!-- <h2 class="mb-5">Software Developer.</h2>
-      <h2>Specializing in web and app development.</h2> -->
+    <div class="text-md text-teal-light">
       <h2 id="one" class="mb-5">Software Developer</h2>
       <h2 id="two"></h2>
     </div>
 
     <h2 class="underline italic pt-10 pb-5 text-3xl">Projects</h2>
 
-    <!-- Project Card Container -->
-    <div class="flex flex-col lg:flex-row justify-center text-left">
-      <a class="no-underline text-black bg-white mx-2 my-4 max-w-xl lg:max-w-xs rounded overflow-hidden shadow-md"
+    <!-- Project Cards Container -->
+    <div class="flex flex-col md:flex-row lg:flex-row justify-center text-left">
+
+      <!-- Book Keeper Card -->
+      <a class="project no-underline text-black bg-white mx-2 my-4 max-w-xl md:max-w-xs rounded overflow-hidden shadow-md"
         href="https://books.evanbuss.com/">
         <div class="">
           <img class="w-full" src="./img/book-keeper.png" alt="">
@@ -44,13 +43,19 @@
           </div>
         </div>
       </a>
-      <a class="no-underline text-black mx-2 my-4 max-w-xs rounded overflow-hidden shadow-md"
+
+      <!-- Grocery list Card -->
+      <a class="project no-underline text-black mx-2 my-4 max-w-xl md:max-w-xs rounded overflow-hidden shadow-md bg-opaque"
         href="#">
         <div class="">
           <img class="" src="#" alt="">
           <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">Grocery List</div>
-            <p class="text-grey-darker text-base">Currently in development. Collaborative shopping list to keep track of
+            <div class="font-bold text-xl mb-2">
+              <i class="fas fa-exclamation-triangle"></i>
+              Grocery List
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <p class="text-grey-darker text-base">Currently in development. Collaborative shopping list for families to keep track of
               weekly purchases.
             </p>
           </div>
@@ -61,13 +66,17 @@
     <!-- Links Container -->
     <div>
       <h2 class="underline italic py-10 text-3xl">Links</h2>
-      <a class="no-underline text-black bg-white p-2 mx-2 rounded-lg hover:text-white
+
+      <!-- GitHub Link -->
+      <a class="inline-block no-underline text-black bg-white p-2 mx-2 rounded-lg hover:text-white
         hover:bg-black" href="https://github.com/evan-buss" alt="GitHub">
-        <i class="text-xl fab fa-github"></i>
+        <i class="text-2xl fab fa-github-alt"></i>
       </a>
-      <a class="no-underline text-black bg-white p-2 mx-2 rounded-lg hover:text-white
-              hover:bg-black" href="#" alt="Twitter">
-        <i class="text-xl fab fa-twitter"></i>
+
+      <!-- Twitter Link -->
+      <a class="inline-block no-underline text-black bg-white p-2 mx-2 rounded-lg hover:text-white
+              hover:bg-black" href="https://twitter.com/evan_buss5" alt="Twitter">
+        <i class="text-2xl fab fa-twitter"></i>
       </a>
     </div>
   </div>
@@ -84,9 +93,33 @@
         setTimeout(typeWriter, speed);
       }
     }
-
     window.addEventListener("load", typeWriter);
   </script>
+
+  <style>
+    * {
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    .bg-pattern {
+      background-image: url("./img/bg-pattern.png");
+      background-repeat: repeat-xy;
+    }
+
+    .bg-gradient {
+      background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    }
+
+    .bg-opaque {
+      background: rgba(0, 0, 0, .2)
+    }
+    .project:hover {
+      position: relative;
+      top: -5px;
+    }
+
+
+  </style>
 </body>
 
 </html>
