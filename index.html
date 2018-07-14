@@ -6,25 +6,87 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Evan Buss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-  <!-- <script src="js/main.js"></script> -->
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" /> -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+
 </head>
 
-<body>
-  <h1 class="title">Evan Buss</h1>
-  <div class="flex-container">
-    <div class="flex-content">
-      <h2>Software Developer.</h2>
-      <h2>Specializing in web and app development.</h2>
-      <!-- <p> Content Coming Soon...</p> -->
+<body class="flex flex-col bg-grey-darkest text-center font-sans text-black min-h-screen justify-center ">
+
+  <!-- Main Card -->
+  <div class="md:max-w-lg lg:max-w-2xl bg-grey-light content-center p-10 mx-auto rounded shadow-lg my-10">
+    <h1 class="underline mb-12 text-5xl">Evan Buss</h1>
+
+    <!-- Info Section Container -->
+    <div class="text-md text-teal">
+      <!-- <h2 class="mb-5">Software Developer.</h2>
+      <h2>Specializing in web and app development.</h2> -->
+      <h2 id="one" class="mb-5">Software Developer</h2>
+      <h2 id="two"></h2>
     </div>
-    <div class="flex-col">
-      <h2 class="title">Projects</h2>
-      <a class="button" href="https://books.evanbuss.com/">Book Keeper</a>
-      <h2 class="title">Links</h2>
-      <a href="https://github.com/evan-buss" class="button">GitHub</a>
+
+    <h2 class="underline italic pt-10 pb-5 text-3xl">Projects</h2>
+
+    <!-- Project Card Container -->
+    <div class="flex flex-col lg:flex-row justify-center text-left">
+      <a class="no-underline text-black bg-white mx-2 my-4 max-w-xl lg:max-w-xs rounded overflow-hidden shadow-md"
+        href="https://books.evanbuss.com/">
+        <div class="">
+          <img class="w-full" src="./img/book-keeper.png" alt="">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Book Keeper</div>
+            <p class="text-grey-darker text-base">First project to learn modern web development. Consists of a Vue.js frontent,
+              a FireBase serverless backend, and the Bulma CSS library.
+            </p>
+          </div>
+        </div>
+      </a>
+      <a class="no-underline text-black mx-2 my-4 max-w-xs rounded overflow-hidden shadow-md"
+        href="#">
+        <div class="">
+          <img class="" src="#" alt="">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Grocery List</div>
+            <p class="text-grey-darker text-base">Currently in development. Collaborative shopping list to keep track of
+              weekly purchases.
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Links Container -->
+    <div>
+      <h2 class="underline italic py-10 text-3xl">Links</h2>
+      <a class="no-underline text-black bg-white p-2 mx-2 rounded-lg hover:text-white
+        hover:bg-black" href="https://github.com/evan-buss" alt="GitHub">
+        <i class="text-xl fab fa-github"></i>
+      </a>
+      <a class="no-underline text-black bg-white p-2 mx-2 rounded-lg hover:text-white
+              hover:bg-black" href="#" alt="Twitter">
+        <i class="text-xl fab fa-twitter"></i>
+      </a>
     </div>
   </div>
+  <script>
+    var i = 0;
+    var j = 0;
+    var txt = 'Focusing on web and mobile.';
+    var speed = 100;
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("two").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.addEventListener("load", typeWriter);
+  </script>
 </body>
 
 </html>
