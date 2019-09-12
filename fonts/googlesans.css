@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("./GoogleSans-Regular.ttf");
+}
+@font-face {
+  font-family: 'Google Sans Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url("./GoogleSans-Bold.ttf");
+}
+@font-face {
+  font-family: 'Google Sans Mediyn';
+  font-style: normal;
+  font-weight: 500;
+  src: url("./GoogleSans-Medium.ttf");
+}
